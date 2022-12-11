@@ -521,28 +521,6 @@ globalkeys = mytable.join(
   awful.key({ modkey }, "v", function() awful.spawn.with_shell("xsel -b | xsel") end,
     { description = "copy gtk to terminal", group = "hotkeys" }),
 
-
-  -- Default
-  --[[ Menubar
-    awful.key({ modkey }, "p", function() menubar.show() end,
-              {description = "show the menubar", group = "launcher"}),
-    --]]
-  --[[ dmenu
-    awful.key({ modkey }, "x", function ()
-            os.execute(string.format("dmenu_run -i -fn 'Monospace' -nb '%s' -nf '%s' -sb '%s' -sf '%s'",
-            beautiful.bg_normal, beautiful.fg_normal, beautiful.bg_focus, beautiful.fg_focus))
-        end,
-        {description = "show dmenu", group = "launcher"}),
-    --]]
-  -- alternatively use rofi, a dmenu-like application with more features
-  -- check https://github.com/DaveDavenport/rofi for more details
-  --[[ rofi
-    awful.key({ modkey }, "x", function ()
-            os.execute(string.format("rofi -show %s -theme %s",
-            'run', 'dmenu'))
-        end,
-        {description = "show rofi", group = "launcher"}),
-    --]]
   -- Prompt
   awful.key({ modkey }, "r", function() awful.screen.focused().mypromptbox:run() end,
     { description = "run prompt", group = "launcher" }),
@@ -556,8 +534,17 @@ globalkeys = mytable.join(
         history_path = awful.util.get_cache_dir() .. "/history_eval"
       }
     end,
-    { description = "lua execute prompt", group = "awesome" })
---]]
+    { description = "lua execute prompt", group = "awesome" }),
+  --]]
+  -- Custom Keybinding
+  awful.key({ modkey }, "d", function()
+    awful.util.spawn("rofi -modi drun,run -show drun -show-icons -theme ~/.config/polybar/shapes/scripts/rofi/launcher.rasi")
+  end,
+    { description = "run rofi", group = "launcher" }),
+
+  awful.key({ modkey }, "p", function() awful.spawn.with_shell("~/.config/polybar/shapes/scripts/powermenu.sh") end,
+    { description = "show the menubar", group = "launcher" })
+
 )
 
 clientkeys = mytable.join(
@@ -815,6 +802,13 @@ client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_n
 -- }}}
 --
 -- Custom
+
 awful.spawn.with_shell("picom");
 awful.spawn.with_shell("xrandr --output HDMI-0 --left-of DP-4 --rotate right --auto");
+awful.spawn.with_shell("~/.config/polybar/shapes/launch.sh &");
 awful.spawn.with_shell("rw");
+
+-- Keybindings
+
+awful.key({ modkey, }, "g", hotkeys_popup.show_help,
+  { description = "show help", group = "awesome" })
