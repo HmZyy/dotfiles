@@ -736,6 +736,9 @@ end)
 
 client.connect_signal("focus", function(c) c.border_color = beautiful.border_focus end)
 client.connect_signal("unfocus", function(c) c.border_color = beautiful.border_normal end)
+client.connect_signal("manage", function(c)
+  c.shape = gears.shape.rounded_rect
+end)
 
 client.connect_signal("request::titlebars", function(c)
   -- buttons for the titlebar
