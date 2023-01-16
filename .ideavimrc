@@ -1,0 +1,93 @@
+"" Source your .vimrc
+"source ~/.vimrc
+
+"" -- Suggested options --
+" Show a few lines of context around the cursor. Note that this makes the
+" text scroll if you mouse-click near the start or end of the window.
+set scrolloff=5
+
+" Do incremental searching.
+set incsearch
+
+" Don't use Ex mode, use Q for formatting.
+map Q gq
+
+imap jk <Esc>
+map H gT
+map L gt
+
+" Save file
+:nmap <c-s> :w<CR>
+:imap <c-s> <Esc>:w<CR>a
+
+
+" System clipboard
+nnoremap yy "+yy
+vnoremap y "+y
+
+nnoremap p "+p
+vnoremap p "+p
+nnoremap P "+P
+vnoremap P "+P
+
+" Leader
+let mapleader = "\<SPACE>"
+
+" Settings idk
+set ignorecase smartcase
+set NERDTree
+set hlsearch
+set showmode
+set history=1000
+set surround
+set incsearch
+set relativenumber
+set number
+set smartcase
+set hlsearch
+set visualbell
+set noerrorbells
+set easymotion
+set commentary
+set ideajoin
+set exchange
+set multiple-cursors
+set sneak
+
+" clear the search buffer when hitting return
+nnoremap <Leader>/ :nohlsearch<cr>
+
+" Quick window navigation
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-l> <C-W>l
+map <C-h> <C-W>h
+
+" Hide open panels
+nmap <Leader>w :action HideAllWindows<CR>
+
+" Open Global Find Dialog box
+nmap <Leader>fp :action FindInPath<CR>
+
+" Open recent project dialog box
+nmap <Leader><Leader>m :action ManageRecentProjects<CR>
+
+" Toggle code minimap
+nmap <Leader>m :action CodeGlance.toggle<CR>
+
+" Nerdtree want to be
+" nmap <Leader>nt :action ActivateProjectToolWindow<CR>
+nmap <Leader>e :NERDTreeToggle<CR>
+
+"" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
+"" Map \r to the Reformat Code action
+"map \r <Action>(ReformatCode)
+
+"" Map <leader>d to start debug
+"map <leader>d <Action>(Debug)
+
+"" Map \b to toggle the breakpoint on the current line
+"map \b <Action>(ToggleLineBreakpoint)
+
+
+" Find more examples here: https://jb.gg/share-ideavimrc
