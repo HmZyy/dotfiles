@@ -253,6 +253,17 @@ return new Action<IConfigContext>((IConfigContext context) =>
         manager.Subscribe(altShift, Keys.P, () => actionMenu.ShowMenu(actionMenuBuilder), "show menu");
         manager.Subscribe(altShift, Keys.Escape, () => context.Enabled = !context.Enabled, "toggle enabled/disabled");
         manager.Subscribe(altShift, Keys.I, () => context.ToggleConsoleWindow(), "toggle console window");
+
+        // Toggle FullScreen
+        manager.Subscribe(alt, Keys.M, () => {
+            if (workspaces.FocusedWorkspace.FocusedWindow.IsMaximized){
+              workspaces.FocusedWorkspace.FocusedWindow.ShowNormal();
+            }
+            else {
+              workspaces.FocusedWorkspace.FocusedWindow.ShowMaximized();
+            }
+           }, "toggle window maximized");
+
     };
     setKeybindings();
 });
