@@ -159,6 +159,13 @@ keybindings:
   - command: "exec wt"
     binding: "Alt+Enter"
 
+  - command: "exec explorer"
+    binding: "Alt+E"
+
+  - command: "exec brave"
+    binding: "Alt+W"
+
+
   # Focus the workspace that last had focus.
   - command: "focus workspace recent"
     binding: "Alt+Y"
