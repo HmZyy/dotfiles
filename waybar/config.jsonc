@@ -48,7 +48,7 @@
     },
 
     "custom/cpuinfo": {
-        "exec": " /home/hamza/.config/hyprdots/scripts/cpuinfo.sh",
+        "exec": " /home/hamza/projects/hmzyy/dotfiles/hyprdots/scripts/cpuinfo.sh",
         "return-type": "json",
         "format": "{}",
         "rotate": 0,
@@ -58,18 +58,18 @@
     },
 
     "custom/gpuinfo": {
-        "exec": " /home/hamza/.config/hyprdots/scripts/gpuinfo.sh",
+        "exec": " /home/hamza/projects/hmzyy/dotfiles/hyprdots/scripts/gpuinfo.sh",
         "return-type": "json",
         "format": "{}",
         "rotate": 0,
         "interval": 5, // once every 5 seconds
         "tooltip": true,
         "max-length": 1000,
-        "on-click": "/home/hamza/.config/hyprdots/scripts/gpuinfo.sh --toggle",
+        "on-click": "/home/hamza/projects/hmzyy/dotfiles/hyprdots/scripts/gpuinfo.sh --toggle",
     },
 
     "custom/gpuinfo#nvidia": {
-        "exec": " /home/hamza/.config/hyprdots/scripts/gpuinfo.sh --use nvidia ",
+        "exec": " /home/hamza/projects/hmzyy/dotfiles/hyprdots/scripts/gpuinfo.sh --use nvidia ",
         "return-type": "json",
         "format": "{}",
         "rotate": 0,
@@ -79,7 +79,7 @@
     },
 
     "custom/gpuinfo#amd": {
-        "exec": " /home/hamza/.config/hyprdots/scripts/gpuinfo.sh --use amd ",
+        "exec": " /home/hamza/projects/hmzyy/dotfiles/hyprdots/scripts/gpuinfo.sh --use amd ",
         "return-type": "json",
         "format": "{}",
         "rotate": 0,
@@ -89,7 +89,7 @@
     },
 
     "custom/gpuinfo#intel": {
-        "exec": " /home/hamza/.config/hyprdots/scripts/gpuinfo.sh --use intel ",
+        "exec": " /home/hamza/projects/hmzyy/dotfiles/hyprdots/scripts/gpuinfo.sh --use intel ",
         "return-type": "json",
         "format": "{}",
         "rotate": 0,
@@ -146,7 +146,7 @@
 		"format": "{icon}",
 		"rotate": 0,
 		"icon-size": 18,
-		"icon-theme": "Gruvbox-Plus-Dark",
+		"icon-theme": "Tela-circle-dracula",
         "spacing": 0,
 		"tooltip-format": "{title}",
 		"on-click": "activate",
@@ -202,9 +202,9 @@
         "rotate": 0,
         "format-muted": "婢",
         "on-click": "pavucontrol -t 3",
-        "on-click-middle": "/home/hamza/.config/hyprdots/scripts/volumecontrol.sh -o m",
-        "on-scroll-up": "/home/hamza/.config/hyprdots/scripts/volumecontrol.sh -o i",
-        "on-scroll-down": "/home/hamza/.config/hyprdots/scripts/volumecontrol.sh -o d",
+        "on-click-middle": "/home/hamza/projects/hmzyy/dotfiles/hyprdots/scripts/volumecontrol.sh -o m",
+        "on-scroll-up": "/home/hamza/projects/hmzyy/dotfiles/hyprdots/scripts/volumecontrol.sh -o i",
+        "on-scroll-down": "/home/hamza/projects/hmzyy/dotfiles/hyprdots/scripts/volumecontrol.sh -o d",
         "tooltip-format": "{icon} {desc} // {volume}%",
         "scroll-step": 5,
         "format-icons": {
@@ -224,19 +224,19 @@
         "format-source": "",
         "format-source-muted": "",
         "on-click": "pavucontrol -t 4",
-        "on-click-middle": "/home/hamza/.config/hyprdots/scripts/volumecontrol.sh -i m",
-        "on-scroll-up": "/home/hamza/.config/hyprdots/scripts/volumecontrol.sh -i i",
-        "on-scroll-down": "/home/hamza/.config/hyprdots/scripts/volumecontrol.sh -i d",
+        "on-click-middle": "/home/hamza/projects/hmzyy/dotfiles/hyprdots/scripts/volumecontrol.sh -i m",
+        "on-scroll-up": "/home/hamza/projects/hmzyy/dotfiles/hyprdots/scripts/volumecontrol.sh -i i",
+        "on-scroll-down": "/home/hamza/projects/hmzyy/dotfiles/hyprdots/scripts/volumecontrol.sh -i d",
         "tooltip-format": "{format_source} {source_desc} // {source_volume}%",
         "scroll-step": 5
     },
 
     "custom/updates": {
-        "exec": "/home/hamza/.config/hyprdots/scripts/systemupdate.sh",
+        "exec": "/home/hamza/projects/hmzyy/dotfiles/hyprdots/scripts/systemupdate.sh",
         "return-type": "json",
         "format": "󰮯 {}",
         "rotate": 0,
-        "on-click": "/home/hamza/.config/hyprdots/scripts/systemupdate.sh up",
+        "on-click": "/home/hamza/projects/hmzyy/dotfiles/hyprdots/scripts/systemupdate.sh up",
         "interval": 86400, // once every day
         "tooltip": true,
     },
@@ -244,7 +244,7 @@
     "custom/keybindhint": {
         "format": " ",
         "rotate": 0,
-        "on-click": "/home/hamza/.config/hyprdots/scripts/keybinds_hint.sh"
+        "on-click": "/home/hamza/projects/hmzyy/dotfiles/hyprdots/scripts/keybinds_hint.sh"
     },
 
     "tray": {
@@ -271,9 +271,9 @@
         "format": "{}",
         "rotate": 0,
         "exec": "echo ; echo 󰆊 switch wallpaper",
-        "on-click": "/home/hamza/.config/hyprdots/scripts/swwwallpaper.sh -n",
-        "on-click-right": "/home/hamza/.config/hyprdots/scripts/swwwallpaper.sh -p",
-        "on-click-middle": "sleep 0.1 && /home/hamza/.config/hyprdots/scripts/swwwallselect.sh",
+        "on-click": "/home/hamza/projects/hmzyy/dotfiles/hyprdots/scripts/swwwallpaper.sh -n",
+        "on-click-right": "/home/hamza/projects/hmzyy/dotfiles/hyprdots/scripts/swwwallpaper.sh -p",
+        "on-click-middle": "sleep 0.1 && /home/hamza/projects/hmzyy/dotfiles/hyprdots/scripts/swwwallselect.sh",
         "interval" : 86400, // once every day
         "tooltip": true
     },
@@ -282,9 +282,9 @@
         "format": "{}",
         "rotate": 0,
         "exec": "echo ; echo 󰟡 switch theme",
-        "on-click": "/home/hamza/.config/hyprdots/scripts/themeswitch.sh -n",
-        "on-click-right": "/home/hamza/.config/hyprdots/scripts/themeswitch.sh -p",
-        "on-click-middle": "sleep 0.1 && /home/hamza/.config/hyprdots/scripts/themeselect.sh",
+        "on-click": "/home/hamza/projects/hmzyy/dotfiles/hyprdots/scripts/themeswitch.sh -n",
+        "on-click-right": "/home/hamza/projects/hmzyy/dotfiles/hyprdots/scripts/themeswitch.sh -p",
+        "on-click-middle": "sleep 0.1 && /home/hamza/projects/hmzyy/dotfiles/hyprdots/scripts/themeselect.sh",
         "interval" : 86400, // once every day
         "tooltip": true
     },
@@ -293,9 +293,9 @@
         "format": "{}", //    //
         "rotate": 0,
         "exec": "echo ; echo  switch bar //  dock",
-        "on-click": "/home/hamza/.config/hyprdots/scripts/wbarconfgen.sh n",
-        "on-click-right": "/home/hamza/.config/hyprdots/scripts/wbarconfgen.sh p",
-        "on-click-middle": "sleep 0.1 && /home/hamza/.config/hyprdots/scripts/quickapps.sh kitty firefox spotify code dolphin",
+        "on-click": "/home/hamza/projects/hmzyy/dotfiles/hyprdots/scripts/wbarconfgen.sh n",
+        "on-click-right": "/home/hamza/projects/hmzyy/dotfiles/hyprdots/scripts/wbarconfgen.sh p",
+        "on-click-middle": "sleep 0.1 && /home/hamza/projects/hmzyy/dotfiles/hyprdots/scripts/quickapps.sh kitty firefox spotify code dolphin",
         "interval" : 86400,
         "tooltip": true
     },
@@ -304,9 +304,9 @@
         "format": "{}",
         "rotate": 0,
         "exec": "echo ; echo 󰅇 clipboard history",
-        "on-click": "sleep 0.1 && /home/hamza/.config/hyprdots/scripts/cliphist.sh c",
-        "on-click-right": "sleep 0.1 && /home/hamza/.config/hyprdots/scripts/cliphist.sh d",
-        "on-click-middle": "sleep 0.1 && /home/hamza/.config/hyprdots/scripts/cliphist.sh w",
+        "on-click": "sleep 0.1 && /home/hamza/projects/hmzyy/dotfiles/hyprdots/scripts/cliphist.sh c",
+        "on-click-right": "sleep 0.1 && /home/hamza/projects/hmzyy/dotfiles/hyprdots/scripts/cliphist.sh d",
+        "on-click-middle": "sleep 0.1 && /home/hamza/projects/hmzyy/dotfiles/hyprdots/scripts/cliphist.sh w",
         "interval" : 86400, // once every day
         "tooltip": true
     },
@@ -315,8 +315,8 @@
         "format": "{}",
         "rotate": 0,
         "exec": "echo ; echo  logout",
-        "on-click": "/home/hamza/.config/hyprdots/scripts/logoutlaunch.sh 2",
-        "on-click-right": "/home/hamza/.config/hyprdots/scripts/logoutlaunch.sh 1",
+        "on-click": "/home/hamza/projects/hmzyy/dotfiles/hyprdots/scripts/logoutlaunch.sh 2",
+        "on-click-right": "/home/hamza/projects/hmzyy/dotfiles/hyprdots/scripts/logoutlaunch.sh 1",
         "interval" : 86400, // once every day
         "tooltip": true
     },
