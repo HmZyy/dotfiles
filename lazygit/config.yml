@@ -57,6 +57,7 @@ gui:
   filterMode: 'substring' # one of 'substring' | 'fuzzy'; see 'Filtering' section below
 git:
   paging:
+    pager: delta --dark --paging=never
     colorArg: always
     useConfig: false
   commit:
