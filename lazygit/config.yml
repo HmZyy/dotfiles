@@ -98,14 +98,14 @@ git:
   truncateCopiedCommitHashesTo: 12 # When copying commit hashes to the clipboard, truncate them to this length. Set to 40 to disable truncation.
 os:
   editPreset: 'nvim-remote' # see 'Configuring File Editing' section
-  edit: 'nvim {{filename}}'
-  editAtLine: 'nvim --line={{line}} {{filename}}'
-  editAtLineAndWait: 'nvim --block --line={{line}} {{filename}}'
-  editInTerminal: true
-  openDirInEditor: 'nvim {{dir}}'
-  copyToClipboardCmd: '' # See 'Custom Command for Copying to Clipboard' section
-  open: ''
-  openLink: ''
+  # edit: 'nvim {{filename}}'
+  # editAtLine: 'nvim --line={{line}} {{filename}}'
+  # editAtLineAndWait: 'nvim --block --line={{line}} {{filename}}'
+  # editInTerminal: true
+  # openDirInEditor: 'nvim {{dir}}'
+  # copyToClipboardCmd: '' # See 'Custom Command for Copying to Clipboard' section
+  # open: ''
+  # openLink: ''
 refresher:
   refreshInterval: 10 # File/submodule refresh interval in seconds. Auto-refresh can be disabled via option 'git.autoRefresh'.
   fetchInterval: 60 # Re-fetch interval in seconds. Auto-fetch can be disabled via option 'git.autoFetch'.
