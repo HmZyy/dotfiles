@@ -106,6 +106,7 @@ local terminal = "kitty"
 local vi_focus = false -- vi-like client focus https://github.com/lcpz/awesome-copycats/issues/275
 local cycle_prev = true -- cycle with only the previously focused client or all https://github.com/lcpz/awesome-copycats/issues/274
 local editor = os.getenv("EDITOR") or "nvim"
+local browser = "brave-browser-nightly"
 
 awful.util.terminal = terminal
 awful.util.tagnames = { "1", "2", "3", "4", "5", "6", "7", "8", "9" }
@@ -730,6 +731,7 @@ awful.rules.rules = {
 				"Wpa_gui",
 				"veromix",
 				"xtightvncviewer",
+				"UnrealEditor",
 			},
 
 			-- Note that the name property shown in xprop might be set slightly after creation of the client
@@ -814,5 +816,5 @@ end)
 --
 -- Custom
 
-awful.spawn.with_shell("picom &")
-awful.spawn.with_shell("~/.screenlayout/main.sh")
+--awful.spawn.with_shell("picom &")
+awful.spawn.with_shell("~/.screenlayout/main.sh &")
