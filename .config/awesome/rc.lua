@@ -817,4 +817,4 @@ end)
 -- Custom
 
 --awful.spawn.with_shell("picom &")
-awful.spawn.with_shell("~/.screenlayout/main.sh &")
+--awful.spawn.with_shell("~/.screenlayout/main.sh &")
