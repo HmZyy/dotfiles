@@ -1,8 +1,8 @@
 set -g fish_greeting
 
-#if status is-interactive
-#    starship init fish | source
-#end
+if status is-interactive
+    starship init fish | source
+end
 
 # List Directory
 alias ls="lsd"
@@ -23,4 +23,3 @@ abbr mkdir 'mkdir -p'
 
 # Fixes "Error opening terminal: xterm-kitty" when using the default kitty term to open some programs through ssh
 alias ssh='kitten ssh'
-neofetch
