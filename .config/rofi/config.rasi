@@ -1,6 +1,6 @@
 // Config //
 configuration {
-    modi:                        "drun,filebrowser,window,run";
+    modi:                        "drun,window,run";
     show-icons:                  true;
     display-drun:                "";
     display-run:                 "";
@@ -8,8 +8,6 @@ configuration {
     display-window:              "";
     drun-display-format:         "{name}";
     window-format:               "{w}{t}";
-    font:                        "JetBrainsMono Nerd Font 10";
-    icon-theme:                  "Tela-circle-dracula";
 }
 
 @theme "~/.config/rofi/themes/theme.rasi"
@@ -37,7 +35,6 @@ mainbox {
     orientation:                 vertical;
     children:                    [ "inputbar" , "listbox" ];
     background-color:            transparent;
-    background-image:            url("~/.config/swww/wall.blur", height);
 }
 
 
@@ -48,7 +45,6 @@ inputbar {
     padding:                     80px;
     children:                    [ "entry" ];
     background-color:            @main-bg;
-    background-image:            url("~/.config/swww/wall.rofi", width);
 }
 entry {
     border-radius:               30px;
@@ -93,7 +89,6 @@ mode-switcher {
     background-color:            transparent;
 }
 button {
-    cursor:                      pointer;
     vertical-align:              0.50;
     horizontal-align:            0.45;
     border-radius:               50px;
@@ -106,21 +101,6 @@ button selected {
 }
 
 
-// Elements //
-element {
-    enabled:                     true;
-    spacing:                     20px;
-    padding:                     9px;
-    border-radius:               25px;
-    cursor:                      pointer;
-    background-color:            transparent;
-    text-color:                  @main-fg;
-}
-@media(max-aspect-ratio: 1.8) {
-    element {
-        orientation:             vertical;
-    }
-}
 element selected.normal {
     background-color:            @select-bg;
     text-color:                  @select-fg;
