@@ -22,13 +22,7 @@ map L gt
 
 
 " System clipboard
-nnoremap yy "+yy
-vnoremap y "+y
-
-nnoremap p "+p
-vnoremap p "+p
-nnoremap P "+P
-vnoremap P "+P
+set clipboard=unnamedplus
 
 " Leader
 let mapleader = "\<SPACE>"
