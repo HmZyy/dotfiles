@@ -1,7 +1,9 @@
 # dotfiles
+
 $HOME sweet $HOME
 
 To create symlinks :
+
 ```
-stow -t $HOME
+stow -t $HOME .
 ```
