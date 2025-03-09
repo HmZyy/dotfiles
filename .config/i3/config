@@ -39,6 +39,9 @@ gaps outer 3
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
 
+# move container to next monitor (and focus)
+bindsym $mod+o move container to output next; focus output next
+
 # switch/iterate between workspaces
 bindsym $mod+Tab workspace next
 bindsym $mod+Shift+Tab workspace prev
