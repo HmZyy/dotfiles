@@ -572,14 +572,16 @@ globalkeys = mytable.join(
 	--
 	-- Custom Keybinding
 	awful.key({ modkey }, "d", function()
-		awful.util.spawn(
-			"rofi -modi drun,run -show drun -show-icons -theme ~/.config/polybar/shapes/scripts/rofi/launcher.rasi"
-		)
+		awful.spawn.with_shell("~/.config/rofi/scripts/launcher.sh --type 6 --style 1")
 	end, { description = "run rofi", group = "launcher" }),
 
 	awful.key({ modkey }, "p", function()
-		awful.spawn.with_shell("~/.config/polybar/shapes/scripts/powermenu.sh")
-	end, { description = "show the menubar", group = "launcher" })
+		awful.spawn.with_shell("~/.config/rofi/scripts/powermenu.sh --type 6 --style 1")
+	end, { description = "Power Menu", group = "launcher" }),
+
+	awful.key({ modkey }, "p", function()
+		awful.spawn.with_shell("~/.config/rofi/scripts/powerprofiles.sh --type 6 --style 1")
+	end, { description = "Power Profiles", group = "launcher" })
 )
 
 clientkeys = mytable.join(
@@ -817,5 +819,6 @@ end)
 -- Custom
 
 awful.spawn.with_shell("compton &")
-awful.spawn.with_shell("~/.screenlayout/main.sh")
+awful.spawn.with_shell("nm-applet &")
+awful.spawn.with_shell("~/.screenlayout/main.sh &")
 awful.spawn.with_shell("/usr/lib/policykit-1-gnome/polkit-gnome-authentication-agent-1 &")
