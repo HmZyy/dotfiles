@@ -579,7 +579,7 @@ globalkeys = mytable.join(
 		awful.spawn.with_shell("~/.config/rofi/scripts/powermenu.sh --type 6 --style 1")
 	end, { description = "Power Menu", group = "launcher" }),
 
-	awful.key({ modkey }, "p", function()
+	awful.key({ modkey, "Shift" }, "p", function()
 		awful.spawn.with_shell("~/.config/rofi/scripts/powerprofiles.sh --type 6 --style 1")
 	end, { description = "Power Profiles", group = "launcher" })
 )
